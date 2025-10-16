@@ -1,0 +1,176 @@
+# Add lightweight styles (once)
+
+# Dashboard → Appearance → Customize → Additional CSS
+# (or Appearance → Editor → Styles → Additional CSS if you’re using a block theme)
+
+
+
+# /* Scope styles to this article only */
+.samd .tldr{border:1px solid #e6e6e6;background:#fafafa;padding:1rem;border-radius:.6rem}
+.samd details{border:1px solid #e6e6e6;border-radius:.6rem;padding:.75rem 1rem;margin:.8rem 0;background:#fff}
+.samd details>summary{cursor:pointer;font-weight:600}
+.samd .callout{border:1px solid #e6e6e6;border-radius:.6rem;padding:1rem;background:#fcfcff}
+.samd .toc{border-left:3px solid #e6e6e6;padding:.5rem 0 .5rem 1rem;margin:1.25rem 0}
+.samd .mini{font-size:.96rem;color:#666}
+.samd .timeline{list-style:none;margin:1rem 0;padding:0}
+.samd .timeline li{position:relative;padding:.75rem 1rem .75rem 1.75rem;border-left:3px solid #e6e6e6}
+.samd .timeline li::before{content:"";position:absolute;left:-6px;top:1.1rem;width:.75rem;height:.75rem;border-radius:50%;background:#999}
+.samd .year{font-weight:700;margin-right:.5rem}
+.samd .badge{display:inline-block;font-size:.8rem;padding:.1rem .35rem;border:1px solid #e6e6e6;border-radius:.4rem;margin-left:.25rem;color:#555}
+.samd .checklist{list-style:none;padding:0}
+.samd .checklist li{display:flex;align-items:flex-start;gap:.6rem;padding:.35rem 0}
+.samd .footnotes{border-top:1px solid #e6e6e6;margin-top:2rem;padding-top:1rem;font-size:.95rem}
+
+
+
+# 2) Add the post content
+
+
+# Create a new post → add a Custom HTML block → paste the markup below.
+# (Use your normal Post Title field; this markup starts at the article body.)
+
+
+<!-- Wrapper class keeps styles scoped to this post -->
+<div class="samd">
+
+  <!-- TL;DR -->
+  <div class="tldr"><strong>TL;DR:</strong> AI and ML are reshaping Software as a Medical Device (SaMD) by turning routine care data into clinical insights. Because many AI systems can change over time, the FDA is using a total product lifecycle approach and tools like <em>Predetermined Change Control Plans (PCCPs)</em> alongside familiar pathways (510(k), De Novo, PMA). Milestones since 2019 include GMLP, transparency principles, the 2024 final PCCP guidance, and a 2025 draft on lifecycle & submissions.</div>
+
+  <!-- Table of contents (manual anchors so it works everywhere) -->
+  <nav class="toc" aria-label="Table of contents">
+    <strong>On this page</strong>
+    <ol>
+      <li><a href="#what-is-aiml">What do we mean by AI and ML?</a></li>
+      <li><a href="#how-transforming">How AI/ML is transforming medical devices</a></li>
+      <li><a href="#fda-basics">How FDA review fits in</a></li>
+      <li><a href="#timeline">Interactive timeline: FDA’s evolving approach (2019–2025)</a></li>
+      <li><a href="#pccp">PCCP: a practical checklist</a></li>
+      <li><a href="#faq">Quick FAQ</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#citations">Citations & further reading</a></li>
+    </ol>
+  </nav>
+
+  <!-- Content -->
+  <h2 id="what-is-aiml">What do we mean by AI and ML?</h2>
+  <p><strong>Artificial Intelligence (AI)</strong> refers to machine‑based systems that, for human‑defined objectives, make predictions, recommendations, or decisions that affect real or virtual environments. <strong>Machine Learning (ML)</strong> is the set of techniques used to train these systems to improve performance from data.</p>
+  <p><em>Examples:</em> dermatology imaging that supports skin cancer diagnosis; a connected sensor estimating cardiac risk from physiological signals.</p>
+
+  <details>
+    <summary>Key terms at a glance</summary>
+    <p class="mini">
+      <strong>SaMD</strong> — Software intended for medical purposes that performs these purposes without being part of a hardware device. <br>
+      <strong>PCCP</strong> — A plan in a marketing submission that pre‑specifies certain future ML/data updates and the methods/controls used to maintain safety and effectiveness. <br>
+      <strong>TPLC</strong> — Total product lifecycle oversight from design to postmarket monitoring.
+    </p>
+  </details>
+
+  <h2 id="how-transforming">How AI/ML is transforming medical devices</h2>
+  <p>AI/ML models can surface clinically useful patterns in images, waveforms, and EHR data—often beyond traditional software. The unique upside is the potential to <em>learn from real‑world use</em> and improve, when supported by strong data governance, validation, human‑factors design, and transparency.</p>
+
+  <div class="callout" role="note"><strong>So what?</strong> Properly designed AI/ML‑enabled devices can assist clinicians, streamline workflows, and support earlier or more accurate detection—provided updates are predictable, validated, and communicated to users.</div>
+
+  <h2 id="fda-basics">How FDA review fits in</h2>
+  <details open>
+    <summary>Premarket pathways—quick explainer</summary>
+    <ul class="mini">
+      <li><strong>510(k)</strong> — for devices shown substantially equivalent to a predicate device.</li>
+      <li><strong>De&nbsp;Novo</strong> — for novel, lower‑to‑moderate‑risk devices without a predicate.</li>
+      <li><strong>PMA</strong> — for higher‑risk (Class III) devices requiring more extensive evidence.</li>
+    </ul>
+    <p class="mini">Software changes (including SaMD updates) may need review depending on risk and significance. <strong>PCCPs</strong> let sponsors pre‑specify certain future ML updates within a single marketing submission.</p>
+  </details>
+
+  <h2 id="timeline">Interactive timeline: FDA’s evolving approach (2019–2025)</h2>
+  <p class="mini">Click each year to expand the summary.</p>
+  <ol class="timeline">
+    <li>
+      <details>
+        <summary><span class="year">2019</span> Discussion paper on AI/ML SaMD modifications <span class="badge">Foundational</span></summary>
+        <p>FDA proposed a TPLC approach for adaptive AI/ML, introducing the idea of pre‑specifying certain model/data changes and controls—the seed of today’s PCCPs.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="year">2021</span> AI/ML SaMD Action Plan + GMLP principles</summary>
+        <p>A policy roadmap and international <em>Good Machine Learning Practice</em> principles to guide safe, effective AI/ML device development.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="year">2023</span> Draft PCCP guidance (Apr) + PCCP Guiding Principles (Oct)</summary>
+        <p>Drafted U.S. marketing submission recommendations for PCCPs (Apr), followed by international guiding principles (Oct) from FDA, Health Canada, and MHRA.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="year">2024</span> Transparency principles (Jun) + Final PCCP Guidance (Dec)</summary>
+        <p>Transparency guidance highlights what users need to know about ML devices (June). FDA then issued the <em>final</em> PCCP guidance (December) describing what belongs in a submission’s PCCP.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="year">2024</span> Cross‑center AI paper (CBER, CDER, CDRH, OCP)</summary>
+        <p>Describes coordination across medical product centers on AI oversight and learnings relevant beyond devices.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="year">2025</span> Draft lifecycle & submission recommendations (AI‑enabled DSFs)</summary>
+        <p>Draft guidance proposing lifecycle considerations and documentation for marketing submissions that include AI‑enabled device software functions.</p>
+      </details>
+    </li>
+  </ol>
+
+  <h2 id="pccp">PCCP: a practical checklist</h2>
+  <p class="mini">Use this to align regulatory, clinical, and engineering teams. (For submissions, follow the FDA guidance in full.)</p>
+  <ul class="checklist" aria-label="PCCP self-checklist">
+    <li><input type="checkbox" id="c1"><label for="c1">Define the future <em>changes</em> your AI model or data may undergo (scope & boundaries).</label></li>
+    <li><input type="checkbox" id="c2"><label for="c2">Describe <em>methods & controls</em> (data management, retraining, verification/validation).</label></li>
+    <li><input type="checkbox" id="c3"><label for="c3">Set <em>performance evaluation</em> plans (metrics, datasets, acceptance criteria).</label></li>
+    <li><input type="checkbox" id="c4"><label for="c4">Update <em>risk management</em> & human‑factors considerations for model changes.</label></li>
+    <li><input type="checkbox" id="c5"><label for="c5">Plan <em>postmarket monitoring</em> and escalation paths.</label></li>
+    <li><input type="checkbox" id="c6"><label for="c6">Define <em>user communication/transparency</em> for each change.</label></li>
+  </ul>
+
+  <h2 id="faq">Quick FAQ</h2>
+  <details>
+    <summary>Do all AI model updates require a new submission?</summary>
+    <p>Not always. The final PCCP guidance explains how some pre‑specified, validated changes can be reviewed as part of an approved plan. Significant changes outside the plan (or that raise risk) can still trigger premarket review.</p>
+  </details>
+  <details>
+    <summary>Which pathway (510(k), De&nbsp;Novo, PMA) applies to an AI‑enabled device?</summary>
+    <p>It depends on intended use, risk, and whether a valid predicate exists. Many AI/ML devices are cleared via 510(k); De&nbsp;Novo or PMA may apply where appropriate.</p>
+  </details>
+  <details>
+    <summary>Where can I see examples of AI‑enabled devices?</summary>
+    <p>FDA maintains a public list of AI‑enabled medical devices authorized for marketing in the U.S. It’s useful for scanning indications, pathways, and trends.</p>
+  </details>
+
+  <h2 id="glossary">Glossary</h2>
+  <p class="mini">
+    <strong>PCCP</strong> — Predetermined Change Control Plan (pre‑specifies certain future changes & controls).<br>
+    <strong>GMLP</strong> — Good Machine Learning Practice (principles for safe, effective ML devices).<br>
+    <strong>TPLC</strong> — Total Product Lifecycle (from design to postmarket monitoring).<br>
+    <strong>AI‑DSF</strong> — AI‑enabled Device Software Function (a device function that implements one or more AI models).
+  </p>
+
+  <section id="citations" class="footnotes" aria-label="Citations & further reading">
+    <h2 id="citations">Citations & further reading</h2>
+    <ol>
+      <li>FDA overview: <a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device">AI/ML in SaMD</a></li>
+      <li>Discussion Paper (Apr 2019): <a href="https://www.fda.gov/files/medical%20devices/published/US-FDA-Artificial-Intelligence-and-Machine-Learning-Discussion-Paper.pdf">Proposed Regulatory Framework for AI/ML‑Based SaMD</a></li>
+      <li>AI/ML SaMD Action Plan (Jan 2021): <a href="https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf">PDF</a></li>
+      <li>GMLP Principles (Oct 2021): <a href="https://www.fda.gov/medical-devices/software-medical-device-samd/good-machine-learning-practice-medical-device-development-guiding-principles">FDA page</a></li>
+      <li>PCCP Draft Guidance (Apr 2023): <a href="https://www.fda.gov/media/166710/download">PDF</a></li>
+      <li>PCCP Guiding Principles (Oct 2023): <a href="https://www.fda.gov/media/173206/download">PDF</a></li>
+      <li>Transparency Principles (Jun 2024): <a href="https://www.fda.gov/medical-devices/software-medical-device-samd/transparency-machine-learning-enabled-medical-devices-guiding-principles">FDA page</a></li>
+      <li>Final PCCP Guidance (Dec 2024): <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial-intelligence">Guidance</a></li>
+      <li>Cross‑center AI paper (Mar 2024): <a href="https://content.govdelivery.com/attachments/USFDA/2024/03/15/file_attachments/2815628/omp_aimedicalproducts_final_240313%20(1).pdf">PDF</a></li>
+      <li>Draft lifecycle & submission recommendations (Jan 2025): <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing">Draft Guidance</a></li>
+      <li>FDA AI‑enabled device list: <a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices">Public list</a></li>
+    </ol>
+    <p class="mini"><em>Not legal advice. Always consult the latest FDA guidance and your regulatory counsel.</em></p>
+  </section>
+
+</div>
